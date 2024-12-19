@@ -1,25 +1,31 @@
-import React from 'react'
-import icon from '../commonResource/images/home/search-icon-sm.png'
-import logo from "../commonResource/images/home/1.jpg";
+import React, { useState } from 'react';
+import icon from '../commonResource/images/home/search-icon-sm.png';
+import logo from "../commonResource/images/home/2.png";
 import { Link } from 'react-router-dom';
+
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <div className="nav-wrapper fixed-top  ">
+    <div className="nav-wrapper fixed-top">
       <div className="container">
         <nav className="navbar navbar-toggleable-sm navbar-expand-md">
           <button
             className="navbar-toggler navbar-toggler-right"
             type="button"
-            data-toggle="collapse"
-            data-target=".navbar-collapse"
+            onClick={toggleMenu}
           >
             ☰
           </button>
-          <Link className="navbar-brand mx-auto h-25 " to="">
-            <img className='unLogo rounded-pill ' src={logo} />
+          <Link className="navbar-brand mx-auto" to="">
+            <img className="unLogo rounded-pill" src={logo} alt="Logo" />
           </Link>
-
-          <div className="navbar-collapse collapse">
+          <div className={`navbar-collapse ${isMenuOpen ? 'show' : ''}`}>
+            <span className="cancel" onClick={toggleMenu}>×</span>
             <ul className="navbar-nav nav-justified w-100 nav-fill">
               <li className="nav-item">
                 <Link className="nav-link js-scroll-trigger" to="/Home/">
@@ -28,12 +34,12 @@ function Header() {
               </li>
               <li className="nav-item">
                 <Link className="nav-link js-scroll-trigger" to="/About/">
-                  About_us
+                  About_Us
                 </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link js-scroll-trigger" to="/Teams/">
-                  Ourteam
+                  Our_Team
                 </Link>
               </li>
               <li className="nav-item">
@@ -52,13 +58,13 @@ function Header() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link js-scroll-trigger" to="/support">
+                <Link className="nav-link js-scroll-trigger" to="/Support">
                   Support
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link js-scroll-trigger" to="/search/">
-                  <img src={icon} />
+                <Link className="nav-link js-scroll-trigger" to="/Search/">
+                  <img src={icon} alt="Search" />
                 </Link>
               </li>
             </ul>
@@ -69,4 +75,4 @@ function Header() {
   );
 }
 
-export default Header
+export default Header;

@@ -1,5 +1,8 @@
 import "./commonResource/css/styles.css"
 import "./commonResource/css/bootstrap.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+
 
 
 import MainPart from "./Components/MainPart";
@@ -23,7 +26,7 @@ function App() {
     <div>
       <Routes>
         <Route path="" element={<SharedLayOut />}>
-          {/* <Route index element={<MainPart />} /> */}
+          <Route index element={<MainPart />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/Teams" element={<Teams/>} />
           <Route path="/About" element={<About />} />
