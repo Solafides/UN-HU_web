@@ -6,7 +6,7 @@ function Footer() {
 		<div > 
 			
 			
-				<div className="footer-links-terms  col-sm-12 order-3 col-lg-6 order-lg-2">
+				<div className="footer-links-terms  col-sm-12 order-3 col-lg-6 order-lg-2 ">
 					<ul>
 						<li><a href="#">Privacy Policy</a></li>
 						<li><a href="#">Terms of Use</a></li>

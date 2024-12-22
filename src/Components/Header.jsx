@@ -1,14 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect,useRef } from 'react';
 import icon from '../commonResource/images/home/search-icon-sm.png';
 import logo from "../commonResource/images/home/2.png";
 import { Link } from 'react-router-dom';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const handleClickOutside = (event) => { 
+    if (menuRef.current && !menuRef.current.contains(event.target)) 
+      { setIsMenuOpen(false); 
+      } };
+       
+      useEffect(() => { document.addEventListener('mousedown', handleClickOutside); 
+        return () => { document.removeEventListener('mousedown', handleClickOutside);
+         }; },
+          []);
 
   return (
     <div className="nav-wrapper fixed-top">
@@ -24,7 +34,7 @@ function Header() {
           <Link className="navbar-brand mx-auto" to="">
             <img className="unLogo rounded-pill" src={logo} alt="Logo" />
           </Link>
-          <div className={`navbar-collapse ${isMenuOpen ? 'show' : ''}`}>
+          <div ref={menuRef} className={`navbar-collapse ${isMenuOpen ? 'show' : ''}`}>
             <span className="cancel" onClick={toggleMenu}>×</span>
             <ul className="navbar-nav nav-justified w-100 nav-fill">
               <li className="nav-item">

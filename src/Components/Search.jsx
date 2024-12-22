@@ -6,7 +6,7 @@ function Search() {
       <br />
       <br />
       <br />
-      <h1>Search Page</h1>
+      <h1>I am gonna delete it</h1>
     </div>
   );
 }
