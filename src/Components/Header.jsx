@@ -1,5 +1,5 @@
 import React, { useState,useEffect,useRef } from 'react';
-import icon from '../commonResource/images/home/search-icon-sm.png';
+// import icon from '../commonResource/images/home/search-icon-sm.png';
 import logo from "../commonResource/images/home/2.png";
 import { Link } from 'react-router-dom';
 
@@ -70,11 +70,6 @@ function Header() {
               <li className="nav-item">
                 <Link className="nav-link js-scroll-trigger" to="/Support">
                   Support
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link js-scroll-trigger" to="/Search/">
-                  <img src={icon} alt="Search" />
                 </Link>
               </li>
             </ul>

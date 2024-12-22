@@ -16,7 +16,7 @@ import SDG from "./Components/SDG";
 import Events from "./Components/Events";
 import Support from "./Components/Support";
 import Gallery from "./Components/Gallery";
-// import Search from "./Components/Search";
+
 
 
 function App() {
@@ -34,7 +34,6 @@ function App() {
           <Route path="/Events" element={<Events />} />
           <Route path="/support" element={<Support />} />
           <Route path="/Gallery" element={<Gallery />} />
-          {/* <Route path="/search" element={<Search/>} /> */}
           <Route path="*" element={<Four04 />} />
           
         </Route>
