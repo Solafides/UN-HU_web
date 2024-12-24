@@ -1,5 +1,6 @@
 function Events() {
   return (
+    <div className="bg-light">
     <div className="otherPages">
       <br />
       <br />
@@ -57,6 +58,7 @@ function Events() {
       </div>
       <h3 className=" text-center text-lg-start " style={{marginLeft: "20px"}}>Webinar</h3>
       <p className="text-center text-lg-start  ">Description:The UNA-ET Hawassa University Chapter is a vibrant student-led Chapter Under Hawassa University dedicated to promoting the principles and objectives of the United Nations, particularly the Sustainable Development Goals (SDGs). Established to empower students and foster global citizenship, the chapter engages in a variety of initiatives aimed at raising awareness about pressing global issues, enhancing education, and encouraging community involvement. ph text</p>
+    </div>
     </div>
   );
 }
