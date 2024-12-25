@@ -1,11 +1,10 @@
 import "./commonResource/css/styles.css"
-import "./commonResource/css/bootstrap.css";
+// import "./commonResource/css/bootstrap.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import MainPart from "./Components/MainPart";
 import { Route, Routes } from "react-router-dom";
-import Home from './Components/Home'
 import Teams from "./Components/Teams";
 import About from './Components/About'
 import SharedLayOut from "./Components/SharedLayOut";
@@ -25,7 +24,7 @@ function App() {
       <Routes>
         <Route path="" element={<SharedLayOut />}>
           <Route index element={<MainPart />} />
-          <Route path="/Home" element={<Home />} />
+          <Route path="/MainPart" element={<MainPart />} />
           <Route path="/Teams" element={<Teams/>} />
           <Route path="/About" element={<About />} />
           <Route path="/SDG" element={<SDG />} />

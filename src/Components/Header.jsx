@@ -38,7 +38,7 @@ function Header() {
             <span className="cancel" onClick={toggleMenu}>×</span>
             <ul className="navbar-nav nav-justified w-100 nav-fill">
               <li className="nav-item">
-                <Link className="nav-link js-scroll-trigger" to="/Home/">
+                <Link className="nav-link js-scroll-trigger" to="/MainPart/">
                   Home
                 </Link>
               </li>
