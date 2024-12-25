@@ -1,10 +1,8 @@
 import "./commonResource/css/styles.css"
 import "./commonResource/css/bootstrap.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-
-
-
 import MainPart from "./Components/MainPart";
 import { Route, Routes } from "react-router-dom";
 import Home from './Components/Home'
