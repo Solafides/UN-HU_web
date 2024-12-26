@@ -1,12 +1,6 @@
-
-import "../commonResource/css/style.css"
+import "../commonResource/css/aboutstyle.css"
 import React from 'react'
 import Groupphoto from "../commonResource/images/home/Groupphoto.png"
-// import instagram from "../commonResource/images/home/1.jpg"
-// import tiktok from "../commonResource/images/home/5.jpg"
-// import linkdin from "../commonResource/images/home/2.jpg"
-// import telegram from "../commonResource/images/home/4.jpg"
-import UNLOGOGRAYBG from "../commonResource/images/home/UNLOGOGRAYBG.jpg"
 import { Link } from 'react-router-dom';
 function About() {
   return (
@@ -15,7 +9,7 @@ function About() {
       <br />
       <br />
       <h1>About Us</h1>
-     <div className='container1'>
+     <div className='about-image'>
       <img src={Groupphoto} />
      </div>
      <div className="container">
@@ -88,17 +82,7 @@ function About() {
         enhance the impact of the UNA-ET HU Chapter and contribute positively to the global conversation around sustainable development and social responsibility.</p>
         </div>
      </div>
-     {/* this part is covered by sharedlayout component
-     <div className="footer"> 
-     <img src={UNLOGOGRAYBG}/>
-     <h3>UN-ET HU CHAPTER</h3>
-     <p className="links">
-     <Link><img src={instagram}/></Link>
-     <Link><img src={linkdin}/></Link>
-     <Link><img src={tiktok}/></Link>
-     <Link><img src={telegram}/></Link>
-     </p>
-     </div> */}
+     
    </div>
   );
 }
